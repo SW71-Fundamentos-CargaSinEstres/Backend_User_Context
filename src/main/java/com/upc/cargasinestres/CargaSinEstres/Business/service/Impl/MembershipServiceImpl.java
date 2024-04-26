@@ -1,18 +1,14 @@
 package com.upc.cargasinestres.CargaSinEstres.Business.service.Impl;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations.CustomerValidation;
 import com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations.MembershipValidation;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Membership.request.MembershipRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Membership.response.MembershipResponseDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Membership;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.ICompanyRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.repository.IMembershipRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.service.IMembershipService;
 import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDate;
 
 /**
  * Implementation of the IMembershipService interface.

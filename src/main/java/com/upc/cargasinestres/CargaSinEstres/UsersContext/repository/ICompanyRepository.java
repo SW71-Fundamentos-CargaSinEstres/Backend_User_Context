@@ -1,7 +1,7 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.repository;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.repository;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity.Company;
 
 import java.util.Optional;
 

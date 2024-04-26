@@ -1,6 +1,5 @@
 package com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Membership.response;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Company;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

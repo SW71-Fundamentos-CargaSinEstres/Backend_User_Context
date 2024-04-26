@@ -1,19 +1,16 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.controller;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.controller;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Customer.request.CustomerRequestDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Customer.response.CustomerResponseDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.service.ICustomerService;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.request.CustomerRequestDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.response.CustomerResponseDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICustomerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 /**
  * REST Customer controller
- * @author Grupo1
- * @version 1.0
  */
 @Tag(name="Customer Controller")
 @RestController

@@ -1,6 +1,7 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.shared.validations;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.request.CompanyRequestDto;
+
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.request.CompanyRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Servicio;
 import com.upc.cargasinestres.CargaSinEstres.Business.repository.IServicioRepository;
 import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ValidationException;

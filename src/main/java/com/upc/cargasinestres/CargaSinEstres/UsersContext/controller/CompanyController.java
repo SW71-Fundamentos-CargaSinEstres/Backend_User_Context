@@ -1,8 +1,9 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.controller;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.controller;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.request.CompanyRequestDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.response.CompanyResponseDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.service.ICompanyService;
+
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.request.CompanyRequestDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response.CompanyResponseDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICompanyService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;

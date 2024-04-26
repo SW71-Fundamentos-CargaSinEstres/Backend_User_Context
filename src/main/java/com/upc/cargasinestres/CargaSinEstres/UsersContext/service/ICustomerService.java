@@ -1,7 +1,7 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.service;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.service;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Customer.request.CustomerRequestDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Customer.response.CustomerResponseDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.request.CustomerRequestDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.response.CustomerResponseDto;
 
 public interface ICustomerService {
 

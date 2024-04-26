@@ -2,7 +2,6 @@ package com.upc.cargasinestres.CargaSinEstres.Business.controller;
 
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Rating.request.RatingRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Rating.response.RatingResponseDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.service.ICompanyService;
 import com.upc.cargasinestres.CargaSinEstres.Business.service.IRatingService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;

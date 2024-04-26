@@ -1,4 +1,4 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.response;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response;
 
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Servicio.response.ServicioResponseDto;
 import lombok.AllArgsConstructor;
@@ -11,8 +11,6 @@ import java.util.List;
  * The CompanyResponseDto class represents the data transfer object of the Company class.
  * It contains fields related to the details of a company entity.
  * This class is used for company information when retrieving a company.
- * @author Grupo1
- * @version 1.0
  */
 
 @Data

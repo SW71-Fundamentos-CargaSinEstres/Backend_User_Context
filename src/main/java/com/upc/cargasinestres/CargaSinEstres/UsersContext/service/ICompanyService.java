@@ -1,7 +1,7 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.service;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.service;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.request.CompanyRequestDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.response.CompanyResponseDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.request.CompanyRequestDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response.CompanyResponseDto;
 
 import java.util.List;
 

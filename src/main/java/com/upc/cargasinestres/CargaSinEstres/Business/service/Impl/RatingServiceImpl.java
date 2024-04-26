@@ -4,15 +4,11 @@ import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Rating.request.R
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Rating.response.RatingResponseDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations.RatingValidation;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Rating;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.ICompanyRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.repository.IRatingRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.service.IRatingService;
-import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ValidationException;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
-import java.io.Console;
 
 @Service
 @Qualifier("ratingServiceImpl")

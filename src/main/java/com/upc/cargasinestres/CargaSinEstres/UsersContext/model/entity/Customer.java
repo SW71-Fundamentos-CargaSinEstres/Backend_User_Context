@@ -1,4 +1,4 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.model.entity;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,21 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-/**
- * This class represents the Client entity for CSE. The table name is clients. And the columns are:
- * <ul>
- *     <li>id - The id of the client</li>
- *     <li>name - The name of the client</li>
- *     <li>last_name - The last name of the customer</li>
- *     <li>celular - The phone number of the client</li>
- *     <li>direccion - The address of the client</li>
- *     <li>email - The email of the client</li>
- *     <li>password - The password of the client</li>
- *     <li>userType - The userType of the client</li>
- * </ul>
- * @author Grupo1
- * @version 1.0
- */
+
 @Data
 @Builder
 @NoArgsConstructor

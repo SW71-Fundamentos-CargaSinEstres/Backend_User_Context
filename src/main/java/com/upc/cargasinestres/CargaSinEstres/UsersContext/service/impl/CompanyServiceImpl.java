@@ -1,14 +1,15 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.service.Impl;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.service.impl;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations.CompanyValidation;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.request.CompanyRequestDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Company.response.CompanyResponseDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Company;
+
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.request.CompanyRequestDto;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response.CompanyResponseDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Rating;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Servicio;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.ICompanyRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.repository.IServicioRepository;
-import com.upc.cargasinestres.CargaSinEstres.Business.service.ICompanyService;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity.Company;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.repository.ICompanyRepository;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICompanyService;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.shared.validations.CompanyValidation;
 import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,6 @@ import java.util.List;
 /**
  * Implementation of the ICompanyService interface.
  * Handles the business logic for company operations.
- * @author Grupo1
  * @version 1.0*/
 @Service
 public class CompanyServiceImpl implements ICompanyService {

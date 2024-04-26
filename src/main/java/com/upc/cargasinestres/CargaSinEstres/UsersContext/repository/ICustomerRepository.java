@@ -1,6 +1,6 @@
-package com.upc.cargasinestres.CargaSinEstres.Business.repository;
+package com.upc.cargasinestres.CargaSinEstres.UsersContext.repository;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Customer;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -50,3 +50,4 @@ public interface ICustomerRepository extends JpaRepository<Customer, Long> {
     Optional<Customer> findByEmail(String email);
 
 }
+

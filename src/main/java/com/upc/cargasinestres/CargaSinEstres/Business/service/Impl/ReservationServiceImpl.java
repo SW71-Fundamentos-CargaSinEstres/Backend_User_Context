@@ -4,8 +4,6 @@ import com.upc.cargasinestres.CargaSinEstres.Business.Shared.validations.Reserva
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Reservation.request.ReservationRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Reservation.response.ReservationResponseDto;
 import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Reservation;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.ICompanyRepository;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.ICustomerRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.repository.IReservationRepository;
 import com.upc.cargasinestres.CargaSinEstres.Business.service.IReservationService;
 import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundException;
@@ -18,7 +16,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.sql.Time;
 
 /**
  * Implementation of the IreservationService interface.
