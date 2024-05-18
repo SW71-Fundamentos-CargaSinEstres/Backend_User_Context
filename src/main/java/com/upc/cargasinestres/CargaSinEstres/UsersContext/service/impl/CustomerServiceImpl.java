@@ -4,8 +4,8 @@ import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundEx
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.request.CustomerRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.response.CustomerResponseDto;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity.Customer;
-import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICustomerService;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.repository.ICustomerRepository;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICustomerService;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.shared.validations.CustomerValidation;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

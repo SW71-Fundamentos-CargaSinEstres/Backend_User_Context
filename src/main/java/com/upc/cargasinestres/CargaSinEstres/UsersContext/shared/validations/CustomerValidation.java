@@ -1,8 +1,8 @@
 package com.upc.cargasinestres.CargaSinEstres.UsersContext.shared.validations;
 
 
-import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.request.CustomerRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ValidationException;
+import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Customer.request.CustomerRequestDto;
 
 import java.time.LocalDate;
 
