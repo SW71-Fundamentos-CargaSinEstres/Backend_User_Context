@@ -1,7 +1,5 @@
 package com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Rating;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Servicio;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -77,8 +75,8 @@ public class Company {
     /**
      * The rating of the company
      */
-    @OneToMany(mappedBy="company")
-    private List<Rating> ratings;
+    /*@OneToMany(mappedBy="company")
+    private List<Rating> ratings;*/
 
     /**
      * Membership of the company
@@ -86,11 +84,11 @@ public class Company {
     @Column(name="idMembership")
     private Long membershipId; //cambiar a conexion por id
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    /*@ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "company_servicio", // Nombre de la tabla de unión
             joinColumns = @JoinColumn(name = "company_id"), // Columna que hace referencia a la entidad actual (Company)
             inverseJoinColumns = @JoinColumn(name = "servicio_id") // Columna que hace referencia a la entidad relacionada (Servicio)
     )
-    private List<Servicio> servicios;
+    private List<Servicio> servicios;*/
 }

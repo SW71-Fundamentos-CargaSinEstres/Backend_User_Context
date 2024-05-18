@@ -1,6 +1,5 @@
 package com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response;
 
-import com.upc.cargasinestres.CargaSinEstres.Business.model.dto.Servicio.response.ServicioResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,7 +24,7 @@ public class CompanyResponseDto {
     private String phoneNumber;
     private String description;
     private String logo;
-    private List<ServicioResponseDto> servicios;
+    private List<Long> servicios;
     private int averageRating;
 
 }

@@ -1,16 +1,13 @@
 package com.upc.cargasinestres.CargaSinEstres.UsersContext.service.impl;
 
 
+import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundException;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.request.CompanyRequestDto;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.dto.Company.response.CompanyResponseDto;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Rating;
-import com.upc.cargasinestres.CargaSinEstres.Business.model.entity.Servicio;
-import com.upc.cargasinestres.CargaSinEstres.Business.repository.IServicioRepository;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.model.entity.Company;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.repository.ICompanyRepository;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.service.ICompanyService;
 import com.upc.cargasinestres.CargaSinEstres.UsersContext.shared.validations.CompanyValidation;
-import com.upc.cargasinestres.CargaSinEstres.Shared.exception.ResourceNotFoundException;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -24,14 +21,12 @@ import java.util.List;
 public class CompanyServiceImpl implements ICompanyService {
 
     private final ICompanyRepository companyRepository;
-    private final IServicioRepository servicioRepository;
     private final ModelMapper modelMapper;
 
     //inyeccion de dependencias
-    public CompanyServiceImpl(ICompanyRepository companyRepository, IServicioRepository servicioRepository, ModelMapper modelMapper) {
+    public CompanyServiceImpl(ICompanyRepository companyRepository, ModelMapper modelMapper) {
 
         this.companyRepository = companyRepository;
-        this.servicioRepository = servicioRepository;
         this.modelMapper = modelMapper;
     }
 
@@ -42,8 +37,8 @@ public class CompanyServiceImpl implements ICompanyService {
         return companies.stream()
                 .map(company -> {
                     CompanyResponseDto companyResponseDto = modelMapper.map(company, CompanyResponseDto.class);
-                    int averageRating = calculateAverageRating(company);
-                    companyResponseDto.setAverageRating(averageRating);
+                    //int averageRating = calculateAverageRating(company);
+                    //companyResponseDto.setAverageRating(averageRating);
                     return companyResponseDto;
                 })
                 .toList();
@@ -55,10 +50,10 @@ public class CompanyServiceImpl implements ICompanyService {
         var company = companyRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("No se encontro la empresa con id: " + id));
 
-        int averageRating = calculateAverageRating(company);
+        //int averageRating = calculateAverageRating(company);
 
         CompanyResponseDto companyResponseDto = modelMapper.map(company, CompanyResponseDto.class);
-        companyResponseDto.setAverageRating(averageRating);
+        //companyResponseDto.setAverageRating(averageRating);
 
         return companyResponseDto;
     }
@@ -80,12 +75,12 @@ public class CompanyServiceImpl implements ICompanyService {
         if(companyRepository.findByLogo(companyRequestDto.getLogo()).isPresent())
             throw new RuntimeException("Ya existe una empresa con ese logo");
 
-        CompanyValidation.ValidateCompany(companyRequestDto, servicioRepository);
+        //CompanyValidation.ValidateCompany(companyRequestDto, servicioRepository);
 
-        List<Servicio> servicios = servicioRepository.findAllById(companyRequestDto.getServicioIds());
+        //List<Servicio> servicios = servicioRepository.findAllById(companyRequestDto.getServicioIds());
         var newCompany = modelMapper.map(companyRequestDto, Company.class);
 
-        newCompany.setServicios(servicios);
+        //newCompany.setServicios(servicios);
 
         var createdCompany = companyRepository.save(newCompany);
         return modelMapper.map(createdCompany, CompanyResponseDto.class);
@@ -130,9 +125,9 @@ public class CompanyServiceImpl implements ICompanyService {
             company.setPassword(companyRequestDto.getPassword());
         }
         if(companyRequestDto.getServicioIds()!=null) {
-            CompanyValidation.validateCompanyServices(companyRequestDto.getServicioIds(), servicioRepository);
-            List<Servicio> servicios = servicioRepository.findAllById(companyRequestDto.getServicioIds());
-            company.setServicios(servicios);
+            //CompanyValidation.validateCompanyServices(companyRequestDto.getServicioIds(), servicioRepository);
+            //List<Servicio> servicios = servicioRepository.findAllById(companyRequestDto.getServicioIds());
+            //company.setServicios(servicios);
         }
 
         Company updatedCompany = companyRepository.save(company); // se guardan los cambios en la base de datos
@@ -151,7 +146,7 @@ public class CompanyServiceImpl implements ICompanyService {
         return modelMapper.map(company, CompanyResponseDto.class); // se retorna un responseDTO con los datos del company
     }
 
-    public static int calculateAverageRating(Company company) {
+    /*public static int calculateAverageRating(Company company) {
         if (company == null || company.getRatings() == null || company.getRatings().isEmpty()) {
             return 0;  // Manejo de casos nulos o vacíos
         }
@@ -162,6 +157,6 @@ public class CompanyServiceImpl implements ICompanyService {
                 .sum();
 
         return (int) Math.round(sumRatings / ratings.size());
-    }
+    }*/
 
 }
